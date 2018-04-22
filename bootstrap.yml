@@ -1,0 +1,6 @@
+# bootstrap
+
+- include: macos
+
+- include: alfred
+- include: moom
