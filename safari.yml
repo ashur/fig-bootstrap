@@ -1,0 +1,50 @@
+# safari
+
+- name: Safe Downloads
+  defaults:
+    action: write
+    domain: com.apple.safari
+    key: AutoOpenSafeDownloads
+    value: -bool false
+
+- name: New Tab Behavior
+  defaults:
+    action: write
+    domain: com.apple.safari
+    key: NewTabBehavior
+    value: -int 1
+
+- name: New Window Behavior
+  defaults:
+    action: write
+    domain: com.apple.safari
+    key: NewWindowBehavior
+    value: -int 4
+
+- name: Preload Top Hit
+  defaults:
+    action: write
+    domain: com.apple.safari
+    key: PreloadTopHit
+    value: -bool false
+
+- name: Show Overlay Status Bar
+  defaults:
+    action: write
+    domain: com.apple.safari
+    key: ShowOverlayStatusBar
+    value: -bool true
+
+- name: Automatic Quote Substitution
+  defaults:
+    action: write
+    domain: com.apple.safari
+    key: WebAutomaticQuoteSubstitutionEnabled
+    value: -bool true
+
+- name: Website-Specific Search
+  defaults:
+    action: write
+    domain: com.apple.safari
+    key: WebsiteSpecificSearchEnabled
+    value: -bool false
