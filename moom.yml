@@ -1,0 +1,16 @@
+# moom
+---
+
+- name: Moom Preferences
+  file:
+    action: replace
+    path: ~/Library/Preferences/com.manytricks.Moom.plist
+    source: com.manytricks.Moom.plist
+
+# Required to update the macOS defaults cache
+- name: Update Moom Preferences Cache
+  defaults:
+      action: read
+      domain: com.manytricks.Moom
+  ignore_errors: true
+  ignore_output: true
