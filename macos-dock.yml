@@ -1,0 +1,11 @@
+# macos-dock
+
+- name: Position Dock
+  defaults:
+    action: write
+    domain: com.apple.dock
+    key: orientation
+    value: left
+
+- name: Relaunch Dock
+  command: killall Dock

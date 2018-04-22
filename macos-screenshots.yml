@@ -1,0 +1,18 @@
+# macos-screenshots
+
+- name: Disable Screenshot Drop Shadows
+  defaults:
+    action: write
+    domain: com.apple.screencapture
+    key:  disable-shadow
+    value:  -bool true
+
+- name: Set Screenshots Location
+  defaults:
+    action: write
+    domain: com.apple.screencapture
+    key:  location
+    value:  ~/Screenshots
+
+- name: Relaunch SystemUIServer
+  command: killall SystemUIServer
