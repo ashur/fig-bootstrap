@@ -1,0 +1,9 @@
+# moom
+---
+
+- name: Alfred Sync Folder
+  defaults:
+    action: write
+    domain: com.runningwithcrayons.Alfred-Preferences-3
+    key: syncfolder
+    value: ~/Dropbox/Alfred
