@@ -1,0 +1,24 @@
+"*":
+  core:
+    allowPendingPaneItems: false
+    packagesWithKeymapsDisabled: [
+      "phpunit"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+  editor:
+    fontSize: 12
+    softTabs: false
+    tabLength: 4
+  "ide-php": {}
+  "markdown-preview":
+    useGitHubStyle: true
+  "tester-phpunit":
+    args: [
+      "--bootstrap=./test/bootstrap.php"
+    ]
+  welcome:
+    showOnStartup: false

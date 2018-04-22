@@ -1,0 +1,145 @@
+# ---------
+# PHP
+# ---------
+'.text.html.php':
+	'PHP Header':
+		'prefix': 'phph'
+		'body': """
+		<?php
+
+		/*
+		 * This file is part of ${1:namespace}
+		 */
+		namespace ${1:namespace};
+
+		${2:}
+	"""
+
+'.source.php':
+
+	# General
+	# ---------
+	'Class':
+		'prefix': 'class'
+		'body': """
+	class ${1:Class}
+	{
+		${2:}
+	}
+	"""
+
+	'Class Method':
+		'prefix': 'method'
+		'body': """
+	/**
+	 * ${6:description}
+	 *
+	 * ${5:@param}
+	 *
+	 * @return	${4:}
+	 */
+	${1:public} function ${2:}(${3:  }) : ${4:}
+	{
+
+	}
+		"""
+
+	'Class Variable':
+		'prefix': 'var'
+		'body': """
+	/**
+	 * @var	${1:type}
+	 */
+	protected $${2:name};
+	"""
+
+	'Print Line':
+		'prefix': 'lp'
+		'body': 'echo $1 . PHP_EOL;';
+
+	'Print Readable':
+		'prefix': 'lr'
+		'body': 'print_r( $1 );';
+
+	# PHPUnit
+	# ---------
+	'Test Class':
+		'prefix': 'testc'
+		'body': """
+	use PHPUnit\\Framework\\TestCase;
+
+	class ${1:Class}Test extends TestCase
+	{
+		${2:}
+	}
+	"""
+
+	'Test Method':
+		'prefix': 'testm'
+		'body': """
+	public function test_${1:method}()
+	{
+
+	}
+	"""
+
+# ---------
+# Plain Text
+# ---------
+'.text.plain':
+	'Bug':
+		'prefix': 'bug'
+		'body': """
+## Summary
+
+${1:}
+
+## Configuration
+
+* **Device** — ${2:}
+* **OS** — ${3:}
+* **Build/Commit** — ${4:}
+
+## Steps
+
+
+
+## Expected Results
+
+
+
+## Actual Results
+
+
+
+## Frequency
+
+* Repeatable
+* Non-repeatable
+* Situational
+* Unknown
+* Always
+* Often
+* Sometimes
+* Once
+
+## Severity
+
+* Crasher
+* Blocker
+* Critical
+* Major
+* Minor
+* Trivial
+* Enhancement
+
+## Regression Status
+
+
+
+## Workaround
+
+
+
+## Notes
+		"""

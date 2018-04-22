@@ -1,0 +1,50 @@
+# atom
+---
+
+# Use individual config files instead of the whole ~/.atom directory
+# to prevent grabbing packages, etc.
+
+- name: config
+  file:
+      action: replace
+      path: ~/.atom/config.cson
+      source: config.cson
+
+- name: keymap
+  file:
+      action: replace
+      path: ~/.atom/keymap.cson
+      source: keymap.cson
+
+- name: snippets
+  file:
+      action: replace
+      path: ~/.atom/snippets.cson
+      source: snippets.cson
+
+- name: Preferences
+  file:
+      action: replace
+      path: ~/Library/Preferences/com.github.atom.plist
+      source: com.github.atom.plist
+
+- name: Preferences (Helper)
+  file:
+      action: replace
+      path: ~/Library/Preferences/com.github.atom.helper.plist
+      source: com.github.atom.helper.plist
+
+# Required to update the macOS defaults cache
+- name: Update Cache
+  defaults:
+      action: read
+      domain: com.github.atom
+  ignore_errors: true
+  ignore_output: true
+
+- name: Update Cache
+  defaults:
+      action: read
+      domain: com.github.atom.helper
+  ignore_errors: true
+  ignore_output: true
