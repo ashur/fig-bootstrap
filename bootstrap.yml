@@ -3,4 +3,5 @@
 - include: macos
 
 - include: alfred
+- include: atom
 - include: moom
